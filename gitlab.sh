@@ -32,5 +32,11 @@ sudo ufw allow https
 sudo ufw allow OpenSSH
 sudo ufw allow 8000
 
+#Removing old gitlab.rb
+sudo rm -rf /etc/gitlab/gitlab.rb
+
+#Adding new gitlab.rb file
+sudo mv ~/gitlab/gitlab.rb /etc/gitlab/
+
 #Reconfigure GitLab Server
 sudo gitlab-ctl reconfigure
